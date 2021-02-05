@@ -1,5 +1,5 @@
 
-import CustomerValidator from './CustomerValidator'
+import RestaurantValidator from './RestaurantValidator'
 
 const handler = {
   createHandler (modules, store, error) {
@@ -8,8 +8,8 @@ const handler = {
     for (let m in modules) {
       const mod = modules[m]
       switch (mod) {
-        case 'customer':
-          validators.customer = new CustomerValidator({ store, error })
+        case 'restaurant':
+          validators.restaurant = new RestaurantValidator({ store, error })
           break
       }
     }
